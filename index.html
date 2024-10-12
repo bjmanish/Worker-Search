@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Worker Search</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custome Css File  -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- custom JavaScript file for fetching location of user -->
+     <script src="./js/fetLocation.js"></script>
+     <script src="./js/animate-card.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand text-bg-primary" href="index.html"><span class="text-danger">L</span>ocal&nbsp;<span class="text-success">W</span>orker&nbsp;<span class="text-warning">S</span>earch</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Find Workers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Post a Job</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about-us">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-cog"></i> Dashboard
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-user-plus"></i> Register</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1 class="heading">Find Local Workers Near You!</h1>
+            <form class="mt-3">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                    </div>
+                    <!-- <select id="searchType" class="custom-select" style="max-width: 150px;">
+                        <option id="zipcode" value="zipcode">Zip Code</option>
+                        <option id="localArea" value="localArea">Local Area/Town</option>
+                    </select> -->
+                    <input type="text" id="location" class="form-control" placeholder="Enter your location">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+            <div class="mt-5">
+                <button type="submit" class="btn bg-dark btn-outline-success">Login<i class="fas fa-sign-in-alt"></i></button>
+                <button type="submit" class=" btn bg-dark btn-outline-danger">Register<i class="fas fa-user-plus"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us py-5" id="about-us">
+        <div class="container">
+            <h2 class="text-center mb-4">About Us</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Our Mission</h5>
+                            <p class="card-text">
+                                To empower local communities by providing a reliable platform for skilled workers to connect with those seeking services.
+                            </p>
+                            <p class="card-text" id="mission-more" style="display: none;">
+                                We aim to build a sustainable community where workers can thrive and clients can find the help they need easily. Our services include connecting skilled tradespeople and providing resources for job seekers.
+                            </p>
+                            <a href="#" class="read-more" onclick="toggleText('mission-more'); return false;">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Our Values</h5>
+                            <p class="card-text">
+                                We believe in integrity, quality, community, and accessibility.
+                            </p>
+                            <p class="card-text" id="values-more" style="display: none;">
+                                Our core values guide our operations and interactions with clients and workers alike, ensuring we maintain the highest standards of service.
+                            </p>
+                            <a href="#" class="read-more" onclick="toggleText('values-more'); return false;">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Who We Are</h5>
+                            <p class="card-text">
+                                Welcome to Local Worker Search, your go-to platform for finding skilled workers in your area.
+                            </p>
+                            <p class="card-text" id="who-more" style="display: none;">
+                                Our team is dedicated to connecting local workers with those in need, ensuring a seamless experience for both parties.
+                            </p>
+                            <a href="#" class="read-more" onclick="toggleText('who-more'); return false;">Read More..</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services py-5 bg-dark" id="services">
+        <div class="container">
+            <h2 class="text-center mb-4 text-light">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Plumbing</h5>
+                            <p class="card-text">Find skilled plumbers for all your plumbing needs, from fixing leaks to installations.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Electrical Work</h5>
+                            <p class="card-text">Hire experienced electricians for repairs, installations, and safety inspections.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Landscaping</h5>
+                            <p class="card-text">Get in touch with local landscapers to beautify your garden and outdoor spaces.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Cleaning Services</h5>
+                            <p class="card-text">Find reliable cleaning professionals for your home or office.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Carpentry</h5>
+                            <p class="card-text">Hire expert carpenters for custom furniture, repairs, and more.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Painting</h5>
+                            <p class="card-text">Transform your space with professional painting services.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact-us py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center text-light mb-4">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6 text-light">
+                    <form >
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="mb-3 text-light">Our Location</h5>
+                    <div class="map-responsive">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9049.883200590773!2d77.47607255933815!3d23.25125611422042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c41e40648af0d%3A0xb256191a4c992275!2sAnandnagar%2C%20Bhopal%2C%20Madhya%20Pradesh%20462022!5e1!3m2!1sen!2sin!4v1728767080120!5m2!1sen!2sin" 
+                            width="600" height="450" style="border:0;" 
+                            allowfullscreen="" loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- Footer Section -->
+    <footer class="bg-dark text-light p-4 text-center">
+        <div class="container">
+            <p>&copy; 2024 Local Worker Search. All Rights Reserved.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#" class="text-light">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="#" class="text-light">Terms of Service</a></li>
+                <li class="list-inline-item"><a href="#" class="text-light">Contact Us</a></li>
+            </ul>
+            <div class="social-media mt-3">
+                <a href="#" class="text-light mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-light mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-light mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-light mx-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- End of Footer Section -->
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn text-right btn-primary" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        function toggleText(id) {
+            const moreText = document.getElementById(id);
+            if (moreText.style.display === "none") {
+                moreText.style.display = "block";
+            } else {
+                moreText.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        // Get the button
+        const backToTopButton = document.getElementById("backToTop");
+    
+        // Show the button when scrolling down
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+    
+        // Scroll to the top when the button is clicked
+        backToTopButton.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // Smooth scrolling
+            });
+        };
+    </script>
+    
+    <!-- Additional content here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

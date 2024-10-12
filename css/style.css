@@ -1,0 +1,141 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #dfe1e2;
+}
+
+.hero {
+    background-image: url('../images/bgImg.jpg'); /* Replace with your image */
+    background-size: cover;
+    height: 400px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.navbar-brand ,.heading{
+    font-weight: 700;
+    transition: color 0.3s ease, transform 0.3s ease; /* Animation for color and scale */
+}
+.navbar-brand:hover , .heading:hover{
+    color: #f8f9fa; /* Change color on hover */
+    transform: scale(1.1); /* Scale up on hover */
+}
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+}
+.navbar-nav .nav-link {
+    color: rgb(78, 17, 17) !important; /* White color for nav links */
+    font-weight: 400;
+}
+.navbar-nav .nav-link:hover {
+    color: #311b42 !important; /* Light color on hover */
+}
+.input-group {
+    max-width: 400px;
+    margin: auto;
+}
+.about-us {
+    background-color: #a79b9b; /* Light background */
+    padding: 40px 0; /* Extra padding */
+}
+
+.card {
+    background-color: #f8f9fa; /* Light background */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth transform effect */
+    box-shadow: 0 4px 15px rgba(244, 12, 12, 0.8); /* Shadow effect */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Increased font size */
+    color: #007bff; /* Bootstrap primary color */
+    font-weight: bold; /* Bold title */
+}
+
+.card-text {
+    color: crimson; /* Darker text color for better readability */
+    font-weight: 400;
+}
+
+h2 {
+    font-weight: bold; /* Bold header */
+    color: #343a40; /* Darker color for the main heading */
+    position: relative; /* Positioning for the pseudo-element */
+}
+
+h2::after {
+    content: ''; /* Empty content for the pseudo-element */
+    display: block; /* Make it a block */
+    width: 50%; /* Width of the underline */
+    height: 2px; /* Thickness of the underline */
+    background-color: #000; /* Color of the underline */
+    margin: 10px auto 0; /* Center the underline */
+    border-radius: 2px; /* Rounded edges for the underline */
+}
+
+.list-inline-item {
+    margin: 0 10px; /* Spacing between values */
+    font-weight: bold; /* Bold values */
+}
+.read-more {
+    color: #207f48; /* Link color */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Underline text */
+}
+
+.read-more:hover {
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Styling for services section */
+.services {
+    background-color: #000; /* Light background for contrast */
+}
+
+/* styling  for contact us section*/
+.contact-us {
+    background-color: #f8f9fa; /* Light background */
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+hr {
+    border: 1px solid #ff0000; /* Blue color for the horizontal line */
+    margin: 0; /*Spacing above and below the line */
+}
+
+/* Footer styling */
+footer {
+    background-color: #343a40; /* Dark background for footer */
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 30px; /* Distance from the bottom */
+    right: 30px; /* Distance from the right */
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
