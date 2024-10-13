@@ -135,7 +135,7 @@
         <div class="container">
             <h2 class="text-center mb-4 text-light">Our Services</h2>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
                             <h5 class="card-title">Plumbing</h5>
@@ -144,7 +144,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
                             <h5 class="card-title">Electrical Work</h5>
@@ -153,7 +153,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
                             <h5 class="card-title">Landscaping</h5>
@@ -162,7 +162,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
                             <h5 class="card-title">Cleaning Services</h5>
@@ -171,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
                             <h5 class="card-title">Carpentry</h5>
@@ -180,7 +180,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
                             <h5 class="card-title">Painting</h5>
@@ -192,39 +192,41 @@
             </div>
         </div>
     </section>
-
+    <hr>
     <!-- Contact Us Section -->
     <section class="contact-us py-5 bg-dark">
         <div class="container">
             <h2 class="text-center text-light mb-4">Contact Us</h2>
             <div class="row">
-                <div class="col-md-6 text-light">
-                    <form >
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                <div class="col-md-6">
+                    <div class="card text-light">
+                        <h5 class="mb-3 text-dark">Get in Touch</h5>
+                        <form class="btn-group-sm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <h5 class="mb-3 text-light">Our Location</h5>
                     <div class="map-responsive">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9049.883200590773!2d77.47607255933815!3d23.25125611422042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c41e40648af0d%3A0xb256191a4c992275!2sAnandnagar%2C%20Bhopal%2C%20Madhya%20Pradesh%20462022!5e1!3m2!1sen!2sin!4v1728767080120!5m2!1sen!2sin" 
-                            width="600" height="450" style="border:0;" 
-                            allowfullscreen="" loading="lazy" 
+                            width="100%" height="100%" 
+                            allowfullscreen="true" loading="lazy" 
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
-                        
                     </div>
                 </div>
             </div>
@@ -252,7 +254,7 @@
     <!-- End of Footer Section -->
 
     <!-- Back to Top Button -->
-    <button id="backToTop" class="btn text-right btn-primary" title="Go to top">
+    <button id="backToTop" class="btn text-right btn-outline-success btn-sm btn-danger" title="Go to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -319,37 +321,7 @@
     </div>
 
 
-    <script>
-        function toggleText(id) {
-            const moreText = document.getElementById(id);
-            if (moreText.style.display === "none") {
-                moreText.style.display = "block";
-            } else {
-                moreText.style.display = "none";
-            }
-        }
-    </script>
-    <script>
-        // Get the button
-        const backToTopButton = document.getElementById("backToTop");
-    
-        // Show the button when scrolling down
-        window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        };
-    
-        // Scroll to the top when the button is clicked
-        backToTopButton.onclick = function() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth" // Smooth scrolling
-            });
-        };
-    </script>
+    <script src="/js/backTotop.js"></script>
     <script src="./js/formValidation.js"></script>
     <!-- Additional content here -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
