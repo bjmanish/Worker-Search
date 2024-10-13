@@ -6,5 +6,5 @@ document.getElementById('logoutBtn').addEventListener('click', function() {
 
     // Redirect to homepage or login page after logout
     alert('You have successfully logged out!');
-    window.location.href = 'index.html'; // Redirect to homepage or login page
+    window.location.href = '/index.html'; // Redirect to homepage or login page
 });
