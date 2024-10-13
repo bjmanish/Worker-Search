@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Admin Panel</h2>
+
+        <form id="workerForm">
+            <div class="form-group">
+                <label for="workerName">Worker Name</label>
+                <input type="text" id="workerName" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="workerProfession">Profession</label>
+                <input type="text" id="workerProfession" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="workerLocation">Location</label>
+                <input type="text" id="workerLocation" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="workerContact">Contact</label>
+                <input type="text" id="workerContact" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="workerSchedule">Available Schedule</label>
+                <input type="text" id="workerSchedule" class="form-control" placeholder="e.g., Mon-Fri, 9 AM - 5 PM" required>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-plus-circle"></i> Add Worker
+            </button>
+            <button type="button" id="clearForm" class="btn btn-warning">
+                <i class="fas fa-trash-alt"></i> Clear Form
+            </button>
+        </form>
+
+        <hr>
+        <h2>Workers List</h2>
+        <ul id="workersList" class="list-group"></ul>
+
+        <!-- Search Bar -->
+        <div class="form-group">
+            <label for="location">Search Workers by Location</label>
+            <input type="text" id="location" class="form-control" placeholder="Enter location to search">
+        </div>
+        <div id="workersList" class="row"></div>
+    </div>
+
+    <script src="Astorage.js"></script>
+
+</body>
+</html>
