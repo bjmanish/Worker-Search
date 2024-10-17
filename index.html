@@ -14,6 +14,8 @@
 </head>
 <body>
 
+    <main>
+        <div class="main-content">
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand text-bg-primary" href="index.html"><span class="text-danger">L</span>ocal&nbsp;<span class="text-success">W</span>orker&nbsp;<span class="text-warning">S</span>earch</a>
@@ -46,6 +48,8 @@
             </ul>
         </div>
     </nav>
+
+    <article class="about active" data-page="about">
 
     <!-- Hero Section -->
     <section class="hero">
@@ -250,13 +254,15 @@
             </div>
         </div>
     </footer>
-    
-    <!-- End of Footer Section -->
 
+
+</main> 
+   
     <!-- Back to Top Button -->
     <button id="backToTop" class="btn text-right btn-outline-success btn-sm btn-danger" title="Go to top">
         <i class="fas fa-arrow-up"></i>
     </button>
+    
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -269,7 +275,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="loginForm">
+                    <form id="loginForm" action="user/index.html">
                         <div class="form-group">
                             <label for="loginEmail">Email address</label>
                             <input type="email" class="form-control" id="loginEmail" placeholder="Enter email">

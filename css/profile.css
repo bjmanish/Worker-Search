@@ -1,0 +1,35 @@
+.nav-link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px; /* Position under the text */
+    height: 1px;
+    background: rgb(250, 249, 249); /* Underline color */
+    transform: scaleX(0); /* Start with no underline */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.nav-item .nav-link:active{
+    /* text-decoration: underline; */
+    -webkit-text-fill-color: crimson;  
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1); /* Animate to full width */
+}
+.navbar .profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.uname{
+    font-size: 20px;
+    font-weight: bold;
+}
+.umail{
+    font-size: 12px;
+    font-weight: lighter;
+}
