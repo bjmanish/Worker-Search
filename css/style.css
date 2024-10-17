@@ -30,7 +30,7 @@ body{
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
 }
 .navbar-nav .nav-link {
-    color: rgb(250, 249, 249) !important; /* White color for nav links */
+    color: rgb(12, 3, 3) !important; /* White color for nav links */
     font-weight: 400;
     transform: scaleX(1); /* Start with no underline */
     transition: transform 0.3s ease; /* Smooth transition */
