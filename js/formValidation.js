@@ -43,7 +43,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         
         // Simulate redirection to the dashboard (dashboard.html)
         setTimeout(function() {
-            window.location.href = 'user/index.html';
+            window.location.href = 'user/dashboard.html';
         }, 2000); // 1-second delay before redirection
     } else {
         alert('Invalid credentials! Please try again.');
